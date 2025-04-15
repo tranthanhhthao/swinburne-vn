@@ -353,9 +353,9 @@ button.contact {
     z-index: 13;
     color: #111;
 
-    &::after {
+    /* &::after {
         content: "\002B";
-    }
+    } */
 }
 
 button.email {
@@ -448,7 +448,7 @@ button.linktree {
         position: relative;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
+        overflow-x: hidden;
         width: 100vw;
     }
 
@@ -479,7 +479,6 @@ button.linktree {
 
     .content {
         margin-left: 50px;
-        overflow-x: hidden;
     }
 
     section.contact {
