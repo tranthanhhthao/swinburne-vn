@@ -346,9 +346,10 @@ button.contact {
     font-size: 1.2em;
 
     z-index: 13;
+    color: #111;
 
     &::after {
-        content: "i";
+        content: "\002B";
     }
 }
 
@@ -424,6 +425,16 @@ button.linktree {
     
             /* border-bottom: 2px solid #111; */
         }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .content {
+        margin-left: 500px;
+    }
+
+    .project {
+        margin-right: 50px;
     }
 }
 

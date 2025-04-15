@@ -37,13 +37,18 @@ sectionContact.addEventListener('mouseout', () => {
 
 // 
 
-sectionContact.addEventListener('touchend', () => {
-    if(isContact == false) {
+btnContact.addEventListener('touchend', () => {
+    if(isContact == true) {
+        isContact = false 
+
+        btnEmail.style.display = 'none';
+        btnLinktree.style.display = 'none'; 
+    } else {
         isContact = true 
 
         btnEmail.style.display = 'flex';
         btnLinktree.style.display = 'flex'; 
-    } 
+    }
 })
 
 // 
