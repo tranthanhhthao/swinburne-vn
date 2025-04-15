@@ -328,7 +328,12 @@ section.contact {
         height: 30px;
         width: 30px;
         border: 2px solid #111;
+        
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
         border-radius: 50%;
+        -khtml-border-radius: 50%;
+
         background-color: white;
 
         display: flex;
@@ -443,6 +448,8 @@ button.linktree {
         position: relative;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
+        width: 100vw;
     }
 
     header {
@@ -472,6 +479,14 @@ button.linktree {
 
     .content {
         margin-left: 50px;
+    }
+
+    section.contact {
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-top: 30px;
+        margin-right: 20px;
     }
 }
 
