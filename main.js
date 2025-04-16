@@ -64,7 +64,7 @@ btnContact.addEventListener('touchend', () => {
 
             if(isEmail == false) {
                 isEmail = true
-
+                isLinktree = false
                 // event.preventDefault();
                 
                 btnEmail.querySelector('a').removeAttribute('href');
@@ -81,7 +81,7 @@ btnContact.addEventListener('touchend', () => {
 
             if(isLinktree == false) {
                 isLinktree = true
-
+                isEmail = false
                 // event.preventDefault();
                 
                 btnLinktree.querySelector('#a-linktree').removeAttribute('href');
