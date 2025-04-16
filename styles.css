@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -13,7 +15,6 @@ body {
     font-family: "Work Sans";
     display: flex;
     flex-direction: row;
-    overflow-x: hidden;
     width: 100%;
 }
 
@@ -398,6 +399,10 @@ button.email {
         border-radius: 20px;
         right: 0;
 
+        img {
+            right: 7px;
+        }
+
         p {
             display: inline-block;
             position: relative;
@@ -422,7 +427,9 @@ button.email {
 }
 
 button.linktree {
-    img {
+    img { 
+        position: relative;;
+        display: inline-block;
         width: 10px;
         /* transform: rotate(-3deg); */
     }
@@ -430,10 +437,15 @@ button.linktree {
         display: none;
     }
 
-    &:hover, &:focus {
+    &:hover {
+        position: relative;
         width: fit-content;
         border-radius: 20px;
         right: 0;
+
+        img {
+            right: 7px;
+        }
 
         p {
             display: inline-block;
