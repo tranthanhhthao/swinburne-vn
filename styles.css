@@ -1,7 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Work Sans";
     display: flex;
     flex-direction: row;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 ::selection {
@@ -22,7 +28,7 @@ header {
     display: flex;
     flex-direction: column;
 
-    /* background-color: antiquewhite; */
+    width: 100%;
     height: 100vh;
 }
 
@@ -347,14 +353,18 @@ section.contact {
 }
 
 button.contact {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
-    font-size: 1.2em;
 
     z-index: 13;
     color: #111;
 
     /* &::after {
         content: "\002B";
+        font-size: 1.2em;
     } */
 }
 
@@ -516,6 +526,10 @@ button.linktree {
     section.contact {
         z-index: 13;
     }
+
+    footer {
+        width: 70vw;
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -566,6 +580,6 @@ button.linktree {
     }
 
     section.contact {
-        top: 23px;
+        top: -5px;
     }
 }
