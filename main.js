@@ -37,6 +37,17 @@ sectionContact.addEventListener('mouseout', () => {
 })
 
 // 
+btnEmail.addEventListener('click', () => {
+    navigator.clipboard.writeText(email)
+    // console.log(getComputedStyle(btnEmail, ':before').getPropertyValue('content'));
+    btnEmail.querySelector('span.copied').style.opacity = 1;
+    
+    setTimeout(() => {
+        btnEmail.querySelector('span.copied').style.opacity = 0;
+    }, 1000)
+})
+
+// 
 
 btnContact.addEventListener('touchend', () => {
     let isLinktree = false;
