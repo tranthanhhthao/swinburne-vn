@@ -7,6 +7,8 @@ const btnLinktree = document.getElementById('button-linktree')
 const email = 'tranthanhhthao@gmail.com'
 
 let isContact = false;
+let isLinktree = false;
+
 btnEmail.style.display = 'none';
 btnLinktree.style.display = 'none';
 
@@ -55,10 +57,28 @@ btnContact.addEventListener('touchend', () => {
 
 btnEmail.addEventListener('click', () => {
     navigator.clipboard.writeText(email)
-    console.log(getComputedStyle(btnEmail, ':before').getPropertyValue('content'));
+    // console.log(getComputedStyle(btnEmail, ':before').getPropertyValue('content'));
     btnEmail.querySelector('span.copied').style.opacity = 1;
     
     setTimeout(() => {
         btnEmail.querySelector('span.copied').style.opacity = 0;
     }, 1000)
 })
+
+btnLinktree.addEventListener('touchend', (event) => {
+
+    if(isLinktree == false) {
+        isLinktree = true
+
+        // event.preventDefault();
+        
+        btnLinktree.querySelector('#a-linktree').removeAttribute('href');
+
+        return false
+    } else {
+        btnLinktree.querySelector('#a-linktree').href = 'https://linktr.ee/tranthanhhthao';
+
+        return true
+    }
+})
+

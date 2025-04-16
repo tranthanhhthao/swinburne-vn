@@ -1,13 +1,20 @@
 * {
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 body {
+    position: relative;
     font-family: "Work Sans";
     display: flex;
     flex-direction: row;
     overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
 }
 
 ::selection {
@@ -362,10 +369,10 @@ button.contact {
     z-index: 13;
     color: #111;
 
-    /* &::after {
+    &::after {
         content: "\002B";
-        font-size: 1.2em;
-    } */
+        font-size: 1.4em;
+    }
 }
 
 button.email {
@@ -410,6 +417,7 @@ button.email {
         left: -50px;
         font-weight: 500;
         opacity: 0;
+        color: #111;
     }
 }
 
@@ -422,7 +430,7 @@ button.linktree {
         display: none;
     }
 
-    &:hover {
+    &:hover, &:focus {
         width: fit-content;
         border-radius: 20px;
         right: 0;
